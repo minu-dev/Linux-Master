@@ -1,0 +1,11 @@
+#!/bin/bash
+select menu in who whoami pwd quit
+do
+	case $menu in
+	who) who;;
+	whoami) whoami;;
+	pwd) pwd;;
+	quit) break;;
+	*) echo "Invalid";;
+	esac
+done

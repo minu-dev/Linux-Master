@@ -1,0 +1,13 @@
+#!/bin/bash
+NOW=$(date +"%a")
+case $NOW in
+	Mon)
+		echo "test"
+		echo "It's Monday";;
+	Tue|Wed|Thu|Fri)
+		echo "Other weekday";;
+	Sat|Sun)
+		echo "Weekend";;
+	*)
+echo "Error";;
+esac
