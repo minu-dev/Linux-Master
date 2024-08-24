@@ -1,4 +1,4 @@
-*Incorrect Answer Note*
+*Review Notes for Wrong Answers*
 # **Part I. 리눅스 실무의 이해**
 ## **Chapter 01. 리눅스의 개요**
 
