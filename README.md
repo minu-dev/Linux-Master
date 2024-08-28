@@ -14,7 +14,7 @@
 
 ## 📃 Index
 
-***1. [Codespaces](https://github.com/Linux-Master/Codespaces)***
+***1. [Codespace](https://github.com/Linux-Master/Codespace)***
 
 
 ***2. [Review Notes for Wrong Answers](https://github.com/minu-dev/Linux-Master/tree/main/Review%20Notes%20for%20Wrong%20Answers)***
