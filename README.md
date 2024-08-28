@@ -20,4 +20,4 @@
 ***2. [Review Notes for Wrong Answers](https://github.com/minu-dev/Linux-Master/tree/main/Review%20Notes%20for%20Wrong%20Answers)***
 
 
-***3. [Words](https://github.com/Linux-Master/Note)***
+***3. [Words](https://github.com/minu-dev/Linux-Master/tree/main/Note)***
