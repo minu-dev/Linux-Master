@@ -103,3 +103,40 @@ lslogins : 시스템의 전체 사용자를 출력
 ```
 <br><br>
 3. 다음 결과에 해당하는 명령으로 알맞은 것은?
+<div align="left">
+<img src="/Review%20Notes%20for%20Wrong%20Answers/Images/lspci.png" width="500px">
+</div>
+
+- [x] lspci
+- [ ] lsmod
+- [ ] lsblk
+- [ ] lscgroup
+```
+lspci : 시스템 내 PCI 버스와 장치의 상세 정보를 출력
+lsmod : 리눅스 커널에 있는 모듈들의 정보를 출력
+lsblk : 블럭 장치 목록을 마운트 되지 않은 블럭 장치 포함해서 출력
+lscgroup : cgroup을 나열하는 명령어로, cgroup이란 프로세스들이 사용하는 시스템의 자원의 사용 정보를 수집하고, 제한시키고, 격리시키는 리눅스 커널 기능
+해당 결과는 시스템에 있는 PCI 장치 정보를 출력하고 있으므로 lspci 가 정답임.
+```
+<br><br>
+4. 특정 모듈을 제거하면서 의존성있는 모듈을 같이 제거하려고 할 때 (   ) 안에 들어갈 옵션으로 알맞은 것은?
+
+|# modeprobe (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) ip6table_filter|
+|:--|
+- [ ] -a
+- [x] -r
+- [ ] -d
+- [ ] -e
+```
+-r 옵션이 모듈 제거 시 의존성 있는 모듈을 함께 제거하는 옵션임.
+```
+<br><br>
+5. 'uname -r' 명령의 결과가 2.6.32-696.el6.i686이다. 다음 중 모듈 간의 의존성을 기록한 파일의 경로로 알맞은 것은?
+- [ ] /etc/modprobe.d/2.6.32-696.el6.i686/modules.dep
+- [ ] /usr/src/kernels/2.6.32-696.el6.i686/modules.dep
+- [ ] /usr/local/src/2.6.32-696.el6.i686/modules.dep
+- [x] /lib/modules/2.6.32-696.el6.i686/modules.dep
+```
+모듈 간 의존성 기록 파일은 /lib/modules/[커널 버전]/modules.dep 에 저장됨.
+커널 버전은 uname -r 명령으로 구할 수 있으므로, 위의 [커널 버전]을 $(uname -r)으로 대체함.
+```
