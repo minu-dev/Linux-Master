@@ -204,7 +204,22 @@ NIS 도메인 이름을 설정하는 네트워크 환경설정 파일임.
 - [ ] ZEROCONF=no
 - [ ] ZEROCONF=yes
 ```
-Zero Configuration Networking 서브넷을 제거하려면, /etc/sysconfig/network 설정 파일에 NOZEROCONF=yes를 추가한 후 네트워킹 서비스를 재시작해야함.
+[전문가 답변]
+169.254.0.0/16 대역은 Zero Configuration Networking 을 위한 예약된 서브넷입니다.
+이 대역의 IP는 인터넷 상에서 사용할 수는 없고 로컬 네트워크 안에서만 유효하기 때문에 링크 로컬 어드레스(Link Local Address)라고도 불리웁니다.
+
+DHCP 서버로 부터 IP를 할당받지 못하였을 때, Zero Configuration Networking은 자동으로 이 대역의 IP 를 부여합니다.
+예를 들어, 네트워크 케이블을 통해 두 기기가 연결되어 있는 상황을 가정해본다면, DHCP와 같은 복잡한 IP 할당 과정 없이 링크 로컬 어드레스 대역의 Ip를 통해 네트워크 통신이 가능해집니다.
+
+관련하여, NOZEROCONF 항목을 yes로 설정함으로써 Zero Configuration Networking 기능을 해제할 수 있고,
+이를 통해 169.254.0.0/16 대역을 삭제하는 효과를 얻을 수 있습니다.
+
+해당 문제는 2017년 기출문제이며, 본 수험서에서는 직접적으로는 다루지 않고 있습니다.
+수험서에서 다루지 않는 내용이라 할지라도, 실제 시험에서는 주변 토픽도 출제 될 수 있다는 의도로 수험서에 포함되어 있습니다.
+
+참고로 Rocky Linux 8에서는 avahi-daemon 을 비활성화하는 방법을 사용할 수 있습니다.
+- sudo systemctl stop avahi-daemon
+- sudo systemctl disable avahi-daemon
 ```
 <br><br>
 6. 다음은 nslookup 명령어 결과이다. www.ihd.or.kr 도메인에 대한 HOST IP를 출력하기 위해 수정해야 할 파일로 알맞은 것은?
